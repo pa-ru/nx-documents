@@ -7,5 +7,15 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "shell-e2e": {
+      "tags": []
+    },
+    "shell": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    }
+  }
 }
