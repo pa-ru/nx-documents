@@ -1,3 +1,4 @@
+import { Document } from '@nx-document/model';
 import { Controller, Get } from '@nestjs/common';
 
 import { AppService } from './app.service';
@@ -6,8 +7,8 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  getData() {
-    return this.appService.getData();
+  @Get('documents')
+  getData() : Document[]{
+    return this.appService.getDocuments();
   }
 }
