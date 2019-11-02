@@ -1,3 +1,6 @@
+# Inspiration:
+* https://www.virtual7.de/websockets-mit-nest-js/
+
 # NxDocument
 
 This project was generated using [Nx](https://nx.dev).

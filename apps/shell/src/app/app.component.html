@@ -1,4 +1,8 @@
 <h1>Todos</h1>
 <ul>
-  <li *ngFor="let t of documents | async">{{ t.title }}</li>
+  <li *ngFor="let t of $documents | async">{{ t.title }}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let t of messages">{{ t.timestamp }} - {{ t.message.title }} </li>
 </ul>
