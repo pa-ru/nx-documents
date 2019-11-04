@@ -1,7 +1,7 @@
 <nx-document-upload></nx-document-upload>
 
 <ul>
-  <li *ngFor="let t of $documents | async">{{ t.title }}</li>
+  <li *ngFor="let t of $documents | async">{{t.uploadTime}} - {{ t.name }}</li>
 </ul>
 
 <ul>

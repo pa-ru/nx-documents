@@ -1,3 +1,3 @@
 export interface DocumentMessage {
-    title: string
+    id: string
 }

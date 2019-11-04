@@ -5,7 +5,6 @@ import { Document, DocumentMessage, DOCUMENT_WEBSOCKET } from '@nx-document/mode
 import { Socket } from 'ngx-socket-io';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
-
 class ServerMessage {
   timestamp: string;
   message: DocumentMessage;
@@ -31,12 +30,12 @@ export class UploadComponent implements OnInit {
 export class AppComponent implements OnInit {
   title = 'shell';
 
-  $documents: Observable<Document[]>;
+  documents: Document[];
 
   messages: Array<ServerMessage> = new Array();
 
-  constructor(http: HttpClient, private socket: Socket) {
-    this.$documents = http.get<Document[]>('/api/documents');
+  constructor(private http: HttpClient, private socket: Socket) {
+    http.get<Document[]>('/api/documents').subscribe(result => this.documents = result);
   }
 
   receiveUpdates(): Observable<DocumentMessage> {
@@ -45,10 +44,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.receiveUpdates().subscribe((documentMessage: DocumentMessage) => {
       this.messages.push({ timestamp: new Date().toLocaleTimeString(), message: documentMessage });
-      console.log(documentMessage);
+      this.http.get<Document>(`/api/documents/${documentMessage}`).subscribe(result => this.documents.push(result));
     });
   }
 

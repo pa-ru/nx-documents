@@ -1,6 +1,5 @@
-import { Document } from './../../../../libs/model/src/lib/document';
-import { Document, DocumentMessage, DOCUMENT_WEBSOCKET } from '@nx-document/model';
-import { OnGatewayConnection, OnGatewayDisconnect, SubscribeMessage, WebSocketGateway, WebSocketServer, WsResponse } from '@nestjs/websockets';
+import { Document, DOCUMENT_WEBSOCKET } from '@nx-document/model';
+import { OnGatewayConnection, OnGatewayDisconnect, SubscribeMessage, WebSocketGateway, WebSocketServer } from '@nestjs/websockets';
 import { Server } from 'socket.io';
 
 @WebSocketGateway()
@@ -47,14 +46,14 @@ export class DocumentsGateway implements OnGatewayConnection, OnGatewayDisconnec
     // }
 }
 
-export const mockData: DocumentMessage[] = [
-    {
-        title: 'invoice 17',
-    },
-    {
-        title: 'donation receipt 87',
-    },
-    {
-        title: 'unknown document type',
-    },
-];
+// export const mockData: DocumentMessage[] = [
+//     {
+//         title: 'invoice 17',
+//     },
+//     {
+//         title: 'donation receipt 87',
+//     },
+//     {
+//         title: 'unknown document type',
+//     },
+// ];

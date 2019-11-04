@@ -1,4 +1,5 @@
 export interface Document{
     id: string;
-    title: string;
+    name: string;
+    uploadTime: string;
 }

@@ -15,7 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     HttpClientModule,
     SocketIoModule.forRoot({
-      url:'http://localhost:3333',
+      url: 'http://localhost:3333',
       options: {},
     }),
     ReactiveFormsModule
@@ -23,4 +23,4 @@ import { ReactiveFormsModule } from '@angular/forms';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
