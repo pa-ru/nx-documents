@@ -15,6 +15,8 @@ export class UploadComponent implements OnInit {
   SERVER_URL = "http://localhost:3333/api/documents";
   uploadForm: FormGroup;
 
+  chosenFile = 'Choose File';
+
   constructor(private formBuilder: FormBuilder, private httpClient: HttpClient) { }
 
   ngOnInit() {
@@ -26,6 +28,7 @@ export class UploadComponent implements OnInit {
   onFileSelect(event) {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
+      this.chosenFile = file.name;
       this.uploadForm.get('profile').setValue(file);
     }
   }

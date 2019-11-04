@@ -1,11 +1,22 @@
-<h1>Angular 7 FormData (multipart/data-form) Example</h1>
-<div>
-    <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+<div class="row">
+    <!-- <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
         <div>
-            <input type="file" name="profile" (change)="onFileSelect($event)" />
+            <input class="form-control-file" type="file" name="profile" (change)="onFileSelect($event)" />
         </div>
         <div>
-            <button type="submit">Upload</button>
+            <button  class="btn btn-primary" type="submit">Upload</button>
+        </div>
+    </form>
+ -->
+    <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile04" (change)="onFileSelect($event)">
+                <label class="custom-file-label" for="inputGroupFile04">{{chosenFile}}</label>
+            </div>
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" type="submit">Upload</button>
+            </div>
         </div>
     </form>
 </div>

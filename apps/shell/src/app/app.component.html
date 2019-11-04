@@ -1,12 +1,25 @@
-<nx-document-upload (fileUploaded)="onFileUploaded($event)"></nx-document-upload>
+<div class="jumbotron">
+  <h1>Angular 7 FormData (multipart/data-form) Example</h1>
+</div>
 
-<h3>documents</h3>
-<ul>
-  <li *ngFor="let t of documents">{{t.uploadTime}} - {{ t.name }}</li>
-</ul>
-
-
-<h3>websocket notifications</h3>
-<ul>
-  <li *ngFor="let t of messages">{{ t.timestamp }} - {{ t.message }} </li>
-</ul>
+<div class="container">
+  <div class="row" style="padding-bottom:.75rem;">
+      <nx-document-upload (fileUploaded)="onFileUploaded($event)"></nx-document-upload>
+  </div>
+  <div class="row">
+    <h3>documents</h3>
+  </div>
+  <div class="row">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let t of documents">{{t.uploadTime}} - {{ t.name }}</li>
+    </ul>
+  </div>
+  <div class="row">
+    <h3>websocket notifications</h3>
+  </div>
+  <div class="row">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let t of messages">{{ t.timestamp }} - {{ t.message }} </li>
+    </ul>
+  </div>
+</div>
