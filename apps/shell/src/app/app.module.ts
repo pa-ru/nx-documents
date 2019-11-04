@@ -7,9 +7,10 @@ import { RouterModule } from '@angular/router';
 import { SocketIoModule } from 'ngx-socket-io';
 import { UploadComponent } from './upload/upload.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ViewerComponent } from './viewer/viewer.component';
 
 @NgModule({
-  declarations: [AppComponent, UploadComponent],
+  declarations: [AppComponent, UploadComponent, ViewerComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),

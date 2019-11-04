@@ -4,22 +4,9 @@
 
 <div class="container">
   <div class="row" style="padding-bottom:.75rem;">
-      <nx-document-upload (fileUploaded)="onFileUploaded($event)"></nx-document-upload>
+    <nx-document-upload></nx-document-upload>
   </div>
   <div class="row">
-    <h3>documents</h3>
-  </div>
-  <div class="row">
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let t of documents">{{t.uploadTime}} - {{ t.name }}</li>
-    </ul>
-  </div>
-  <div class="row">
-    <h3>websocket notifications</h3>
-  </div>
-  <div class="row">
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let t of messages">{{ t.timestamp }} - {{ t.message }} </li>
-    </ul>
+    <nx-document-viewer></nx-document-viewer>
   </div>
 </div>

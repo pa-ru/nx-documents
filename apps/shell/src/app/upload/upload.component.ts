@@ -1,7 +1,7 @@
-import { Document } from '@nx-document/model';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { DocumentStoreService } from '../document-store.service';
 
 @Component({
   selector: 'nx-document-upload',
@@ -10,14 +10,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UploadComponent implements OnInit {
 
-  @Output() fileUploaded: EventEmitter<Document> = new EventEmitter();
-
-  SERVER_URL = "http://localhost:3333/api/documents";
   uploadForm: FormGroup;
 
   chosenFile = 'Choose File';
 
-  constructor(private formBuilder: FormBuilder, private httpClient: HttpClient) { }
+  constructor(private formBuilder: FormBuilder, private documentStore: DocumentStoreService) { }
 
   ngOnInit() {
     this.uploadForm = this.formBuilder.group({
@@ -36,13 +33,6 @@ export class UploadComponent implements OnInit {
   onSubmit() {
     const formData = new FormData();
     formData.append('file', this.uploadForm.get('profile').value);
-
-    this.httpClient.post(this.SERVER_URL, formData).subscribe(
-      (res) => {
-        this.fileUploaded.emit({ id: (<any>res).id.toString(), name: 'n.a.', uploadTime: 'n.a.' });
-        console.log(res)
-      },
-      (err) => console.log(err)
-    );
+    this.documentStore.addDocument(formData);
   }
 }
