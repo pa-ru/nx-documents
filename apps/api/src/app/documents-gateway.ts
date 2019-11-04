@@ -1,13 +1,7 @@
-import { TestingModule } from '@nestjs/testing';
+import { Document } from './../../../../libs/model/src/lib/document';
 import { Document, DocumentMessage, DOCUMENT_WEBSOCKET } from '@nx-document/model';
 import { OnGatewayConnection, OnGatewayDisconnect, SubscribeMessage, WebSocketGateway, WebSocketServer, WsResponse } from '@nestjs/websockets';
-import { Client, Server } from 'socket.io';
-import { from, Observable, of, interval } from 'rxjs';
-import { concatMap, delay, map } from 'rxjs/operators';
-
-function randomDelay(bottom, top) {
-    return Math.floor(Math.random() * (1 + top - bottom)) + bottom;
-}
+import { Server } from 'socket.io';
 
 @WebSocketGateway()
 export class DocumentsGateway implements OnGatewayConnection, OnGatewayDisconnect {
@@ -27,19 +21,30 @@ export class DocumentsGateway implements OnGatewayConnection, OnGatewayDisconnec
     }
 
     @SubscribeMessage(DOCUMENT_WEBSOCKET.DOCUMENT_PROCESSED_EVENT_NAME)
-    handleLiveticker(client: Client, data: unknown): Observable<WsResponse<DocumentMessage>> {
-        return interval(1000)
-            .pipe(
-                concatMap((number) => {
-                    return of(
-                        { event: DOCUMENT_WEBSOCKET.DOCUMENT_PROCESSED_EVENT_NAME, data: { title: 'invoice ' + number } }
-                    )
-                        .pipe(
-                            delay(randomDelay(1000, 5000))
-                        );
-                })
-            );
+    handleDocuments(data: Document): string {
+        return data.id;
     }
+
+    public broadcast(document: Document) {
+        this.server.emit(DOCUMENT_WEBSOCKET.DOCUMENT_PROCESSED_EVENT_NAME, document.id)
+    }
+
+    // @SubscribeMessage(DOCUMENT_WEBSOCKET.DOCUMENT_PROCESSED_EVENT_NAME)
+    // handleDocuments(client: Client, data: Document): Observable<WsResponse<DocumentMessage>> {
+    //     return data.id;
+
+    //     return interval(1000)
+    //         .pipe(
+    //             concatMap((number) => {
+    //                 return of(
+    //                     { event: DOCUMENT_WEBSOCKET.DOCUMENT_PROCESSED_EVENT_NAME, data: { title: 'invoice ' + number } }
+    //                 )
+    //                     .pipe(
+    //                         delay(Math.floor(Math.random() * (1 + 1000 - 5000)) + 1000))
+    //                     );
+    //             })
+    //         );
+    // }
 }
 
 export const mockData: DocumentMessage[] = [

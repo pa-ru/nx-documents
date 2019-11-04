@@ -8,6 +8,6 @@ export interface Todo {
 @Injectable()
 export class AppService {
   getDocuments(): Document[] {
-    return [{ title: 'invoice' }, { title: 'donation receipt' }];
+    return [{ title: 'invoice', id: '1' }, { title: 'donation receipt', id: '2' }];
   }
 }

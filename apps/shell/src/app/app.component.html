@@ -1,8 +1,9 @@
-<h1>Todos</h1>
+<nx-document-upload></nx-document-upload>
+
 <ul>
   <li *ngFor="let t of $documents | async">{{ t.title }}</li>
 </ul>
 
 <ul>
-  <li *ngFor="let t of messages">{{ t.timestamp }} - {{ t.message.title }} </li>
+  <li *ngFor="let t of messages">{{ t.timestamp }} - {{ t.message }} </li>
 </ul>

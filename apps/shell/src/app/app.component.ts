@@ -3,12 +3,24 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Document, DocumentMessage, DOCUMENT_WEBSOCKET } from '@nx-document/model';
 import { Socket } from 'ngx-socket-io';
-import { Server } from 'net';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 
 class ServerMessage {
   timestamp: string;
   message: DocumentMessage;
+}
+
+export class UploadComponent implements OnInit {
+
+  SERVER_URL = "http://localhost:3333/documents";
+  uploadForm: FormGroup;
+  constructor(private formBuilder: FormBuilder, private httpClient: HttpClient) { }
+  ngOnInit() {
+    this.uploadForm = this.formBuilder.group({
+      profile: ['']
+    });
+  }
 }
 
 @Component({
