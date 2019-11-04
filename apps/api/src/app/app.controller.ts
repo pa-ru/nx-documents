@@ -34,7 +34,7 @@ export class AppController {
 
   @Post('documents')
   @UseInterceptors(FileInterceptor('file'))
-  uploadFile(@UploadedFile() file): string {
+  uploadFile(@UploadedFile() file) {
     let id = uuid.v4();
     this.documentService
       .createAsync({ uuid: id, name: file.originalname, size: file.size, uploadTime: new Date().toLocaleTimeString() })
@@ -44,6 +44,6 @@ export class AppController {
         }, 3000)
       });
 
-    return id;
+    return { id: id, accepted: true };
   }
 }

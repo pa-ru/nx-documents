@@ -1,9 +1,12 @@
-<nx-document-upload></nx-document-upload>
+<nx-document-upload (fileUploaded)="onFileUploaded($event)"></nx-document-upload>
 
+<h3>documents</h3>
 <ul>
-  <li *ngFor="let t of $documents | async">{{t.uploadTime}} - {{ t.name }}</li>
+  <li *ngFor="let t of documents">{{t.uploadTime}} - {{ t.name }}</li>
 </ul>
 
+
+<h3>websocket notifications</h3>
 <ul>
   <li *ngFor="let t of messages">{{ t.timestamp }} - {{ t.message }} </li>
 </ul>

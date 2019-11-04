@@ -46,8 +46,19 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.receiveUpdates().subscribe((documentMessage: DocumentMessage) => {
       this.messages.push({ timestamp: new Date().toLocaleTimeString(), message: documentMessage });
-      this.http.get<Document>(`/api/documents/${documentMessage}`).subscribe(result => this.documents.push(result));
+      this.http
+        .get<Document>(`/api/documents/${documentMessage}`)
+        .subscribe(result => {
+          let index = this.documents.findIndex(eleme => eleme.id == result.id);
+          if (~index) {
+            this.documents[index] = result;
+          }
+        });
     });
+  }
+
+  onFileUploaded(document: Document) {
+    this.documents.push(document);
   }
 
 }
