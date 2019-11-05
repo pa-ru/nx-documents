@@ -3,6 +3,9 @@
 </div>
 <div class="row">
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let t of documentStore?.documents?.slice().reverse()">{{t.uploadTime}} - {{ t.name }}</li>
+        <li class="list-group-item" *ngFor="let t of documentStore?.documents?.slice().reverse()">
+            <h3>{{ t.name }}</h3>
+            {{t.id}}: {{t.uploadTime}} 
+        </li>
     </ul>
 </div>

@@ -22,9 +22,9 @@ export class AppController {
 
   @Get('documents/:uuid')
   getByUUID(@Param() params): Document {
-    let document = this.documentService
+    const document = this.documentService
       .getAll()
-      .find(elem => elem.uuid == params.uuid);
+      .find(elem => elem.uuid === params.uuid);
 
     if (document) {
       return { id: document.uuid, name: document.name, uploadTime: document.uploadTime }
@@ -35,7 +35,7 @@ export class AppController {
   @Post('documents')
   @UseInterceptors(FileInterceptor('file'))
   uploadFile(@UploadedFile() file) {
-    let id = uuid.v4();
+    const id = uuid.v4();
     this.documentService
       .createAsync({ uuid: id, name: file.originalname, size: file.size, uploadTime: new Date().toLocaleTimeString() })
       .subscribe(elem => {

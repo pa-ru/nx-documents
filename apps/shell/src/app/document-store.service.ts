@@ -37,11 +37,11 @@ export class DocumentStoreService {
   }
 
   addDocument(formData) {
-    // this.documents.push();
-    console.log('addDocument: ' + JSON.stringify(formData));
+
+    const fileName = (<File>formData.get('file')).name;
     this.http.post(this.SERVER_URL, formData).subscribe(	
       (res) => {	
-       this.documents.push({ id: (<any>res).id.toString(), name: 'n.a.', uploadTime: 'n.a.' })
+       this.documents.push({ id: (<any>res).id.toString(), name: fileName, uploadTime: 'n.a.' })
         console.log(JSON.stringify(res));	
       },	
       (err) => console.log(err)

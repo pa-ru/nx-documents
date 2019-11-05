@@ -1,10 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { DocumentMessage } from '@nx-document/model';
+import { Component } from '@angular/core';
 
-class ServerMessage {
-  timestamp: string;
-  message: DocumentMessage;
-}
 @Component({
   selector: 'nx-document-root',
   templateUrl: './app.component.html',
