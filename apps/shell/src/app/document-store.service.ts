@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Socket } from 'ngx-socket-io';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { DocumentMessage, DOCUMENT_WEBSOCKET, Document } from '@nx-document/model';
 
 @Injectable({
@@ -40,7 +40,8 @@ export class DocumentStoreService {
     const document = this.documents.find(elem => elem.id === prototype.id);
     if (document) {
       const index = this.documents.indexOf(document);
-      this.documents[index] = prototype;
+      this.documents[index] = {...prototype};
+      this.documents = [...this.documents];
     }
 
   }
@@ -54,8 +55,8 @@ export class DocumentStoreService {
     const fileName = (<File>formData.get('file')).name;
     this.http.post(this.SERVER_URL, formData).subscribe(
       (res) => {
-        const newItem = { id: (<any>res).id.toString(), name: fileName, uploadTime: 'n.a.' }
-        this.documents = [newItem, ...this.documents];
+        const newItem = { id: (<any>res).id, name: fileName, uploadTime: 'n.a.' }
+        this.documents = [...this.documents, newItem];
 
         console.log(JSON.stringify(res));
       },

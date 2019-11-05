@@ -1,5 +1,5 @@
 export interface Document{
-    id: string;
+    id: number;
     name: string;
     uploadTime: string;
 }

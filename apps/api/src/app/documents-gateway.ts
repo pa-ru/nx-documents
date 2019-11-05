@@ -20,7 +20,7 @@ export class DocumentsGateway implements OnGatewayConnection, OnGatewayDisconnec
     }
 
     @SubscribeMessage(DOCUMENT_WEBSOCKET.DOCUMENT_PROCESSED_EVENT_NAME)
-    handleDocuments(data: Document): string {
+    handleDocuments(data: Document): number {
         return data.id;
     }
 

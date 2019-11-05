@@ -9,12 +9,17 @@ import { SocketIoModule } from 'ngx-socket-io';
 import { UploadComponent } from './upload/upload.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ViewerComponent } from './viewer/viewer.component';
+import { ViewerItemComponent } from './viewer-item/viewer-item.component';
+import { SortByPipe } from './sort-by.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UploadComponent,
-    ViewerComponent],
+    ViewerComponent,
+    ViewerItemComponent,
+    SortByPipe
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),

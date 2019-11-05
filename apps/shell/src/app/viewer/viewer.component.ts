@@ -1,10 +1,10 @@
 import { DocumentStoreService } from './../document-store.service';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'nx-document-viewer',
   templateUrl: './viewer.component.html',
-  styleUrls: ['./viewer.component.css']
+  styleUrls: ['./viewer.component.scss']
 })
 export class ViewerComponent {
 
