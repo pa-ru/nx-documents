@@ -11,10 +11,14 @@
     </div>
     <div class="card-body">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item" *ngFor="let t of documentStore?.documents$ | async">
-                <h3>{{ t.name }}</h3>
-                {{t.id}}: {{t.uploadTime}}
-            </li>
+            <cdk-virtual-scroll-viewport style="height: 500px" itemSize="20">
+                <ng-container *cdkVirtualFor="let t of documentStore?.documents$ | async">
+                    <li class="list-group-item" >
+                        <h3>{{ t.name }}</h3>
+                        {{t.id}}: {{t.uploadTime}}
+                    </li>
+                </ng-container>
+            </cdk-virtual-scroll-viewport>
         </ul>
     </div>
 

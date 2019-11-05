@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -10,7 +11,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ViewerComponent } from './viewer/viewer.component';
 
 @NgModule({
-  declarations: [AppComponent, UploadComponent, ViewerComponent],
+  declarations: [
+    AppComponent,
+    UploadComponent,
+    ViewerComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
@@ -19,7 +23,8 @@ import { ViewerComponent } from './viewer/viewer.component';
       url: 'http://localhost:3333',
       options: {},
     }),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
