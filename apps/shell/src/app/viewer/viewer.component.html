@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="card-body">
-        <cdk-virtual-scroll-viewport class="document-scroll-container" style="height: 500px" itemSize="20">
+        <cdk-virtual-scroll-viewport class="card dna-card-info scrollable-list document-scroll-container" style="height: 500px" itemSize="20">
             <nx-document-viewer-item class="document-scroll-item list-group-item" *cdkVirtualFor="let t of documentStore?.documents$ | async | sortBy:'desc':'id'" [document]="t">
             </nx-document-viewer-item>
         </cdk-virtual-scroll-viewport>

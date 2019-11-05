@@ -50,193 +50,6 @@ This must be run when you have at least 2 sprites.
 
 .sprites(@spritesheet-sprites);
 */
-.svg-fi-fehler-16 {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 100% 21.05263157894737%;
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-fi-fehler-16-dims {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-fi-fehler-32 {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 0 73.33333333333333%;
-  width: 3.2rem;
-  height: 3.2rem;
-}
-.svg-fi-fehler-32-dims {
-  width: 3.2rem;
-  height: 3.2rem;
-}
-.svg-fi-hilfe-20 {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 37.2093023255814% 61.111111111111114%;
-  width: 2rem;
-  height: 2rem;
-}
-.svg-fi-hilfe-20-dims {
-  width: 2rem;
-  height: 2rem;
-}
-.svg-fi-information-16 {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 0 100%;
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-fi-information-16-dims {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-fi-information-32 {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 64.86486486486487% 0;
-  width: 3.2rem;
-  height: 3.2rem;
-}
-.svg-fi-information-32-dims {
-  width: 3.2rem;
-  height: 3.2rem;
-}
-.svg-fi-kalender-16 {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 100% 42.10526315789474%;
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-fi-kalender-16-dims {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-fi-ok-20 {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 60.46511627906977% 61.111111111111114%;
-  width: 2rem;
-  height: 2rem;
-}
-.svg-fi-ok-20-dims {
-  width: 2rem;
-  height: 2rem;
-}
-.svg-fi-warnung-16 {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-fi-warnung-16-dims {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-fi-warnung-32 {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 21.62162162162162% 0;
-  width: 3.2rem;
-  height: 3.2rem;
-}
-.svg-fi-warnung-32-dims {
-  width: 3.2rem;
-  height: 3.2rem;
-}
-.svg-sli-breadcrumb {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 83.33333333333333% 0;
-  width: 1rem;
-  height: 1.8rem;
-}
-.svg-sli-breadcrumb-dims {
-  width: 1rem;
-  height: 1.8rem;
-}
-.svg-sli-checkmark {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 100% 63.1578947368421%;
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-sli-checkmark-dims {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-sli-lasche {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  width: 1.6rem;
-  height: 4.4rem;
-}
-.svg-sli-lasche-dims {
-  width: 1.6rem;
-  height: 4.4rem;
-}
-.svg-sli-pfeil-rechts {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 81.63265306122449% 23.076923076923077%;
-  width: 0.8rem;
-  height: 1.4rem;
-}
-.svg-sli-pfeil-rechts-dims {
-  width: 0.8rem;
-  height: 1.4rem;
-}
-.svg-sli-pfeil-runter {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 97.82608695652173% 76.26310772163966%;
-  width: 1.4rem;
-  height: 0.808rem;
-}
-.svg-sli-pfeil-runter-dims {
-  width: 1.4rem;
-  height: 0.808rem;
-}
-.svg-sli-radiobutton {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 35.55555555555556% 100%;
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-sli-radiobutton-dims {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-sli-radiobutton-disabled {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 17.77777777777778% 100%;
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-sli-radiobutton-disabled-dims {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.svg-sli-schliessen {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
-  background-repeat: no-repeat;
-  background-position: 51.06382978723404% 40%;
-  width: 1.2rem;
-  height: 1.2rem;
-}
-.svg-sli-schliessen-dims {
-  width: 1.2rem;
-  height: 1.2rem;
-}
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -490,11 +303,6 @@ th {
   .table-bordered td {
     border: 1px solid #ddd !important;
   }
-}
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -7385,7 +7193,6 @@ body.genepool {
   display: block;
   position: absolute;
   height: 1rem;
-  background: url('../images/schattenkante.png') no-repeat;
   background-size: 100% 1rem;
   z-index: 9;
   top: 0;
@@ -7856,7 +7663,6 @@ body.genepool {
   display: block;
   position: absolute;
   height: 1rem;
-  background: url('../images/schattenkante.png') no-repeat;
   background-size: 100% 1rem;
   z-index: 9;
   top: auto;
@@ -7890,7 +7696,6 @@ body.genepool {
   display: block;
   position: absolute;
   height: 1rem;
-  background: url('../images/schattenkante.png') no-repeat;
   background-size: 100% 1rem;
   z-index: 9;
   top: auto;
@@ -8055,7 +7860,6 @@ body.genepool {
 .genepool .dna-breadcrumb .dna-breadcrumb-item:not(:last-child):after {
   display: inline-block;
   margin-top: .5rem;
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 83.33333333333333% 0;
   width: 1rem;
@@ -8656,7 +8460,6 @@ body.genepool {
   display: inline-block;
   vertical-align: text-top;
   margin: 0.2rem 0 0 0.8rem;
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 81.63265306122449% 23.076923076923077%;
   width: 0.8rem;
@@ -8722,7 +8525,6 @@ body.genepool {
   margin: 0;
 }
 .genepool .btn-help::before {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 37.2093023255814% 61.111111111111114%;
   width: 2rem;
@@ -8771,7 +8573,6 @@ body.genepool {
   display: inline-block;
   margin: .2rem;
   border: none;
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 81.63265306122449% 23.076923076923077%;
   width: 0.8rem;
@@ -8848,7 +8649,6 @@ body.genepool {
 }
 .genepool .dna-datepicker .bs-datepicker-head button.previous span::after {
   content: "<";
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 81.63265306122449% 23.076923076923077%;
   position: absolute;
@@ -8865,7 +8665,6 @@ body.genepool {
 }
 .genepool .dna-datepicker .bs-datepicker-head button.next span::after {
   content: ">";
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 81.63265306122449% 23.076923076923077%;
   position: absolute;
@@ -8966,7 +8765,6 @@ body.genepool {
   top: 0;
 }
 .genepool .dna-datepicker-group .dna-datepicker-button .icon {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 100% 42.10526315789474%;
   position: absolute;
@@ -9175,7 +8973,6 @@ body.genepool {
   box-shadow: 0 0.2rem #3FA4DA !important;
 }
 .genepool .has-info .dna-message-provider {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 0 100%;
   width: 1.6rem;
@@ -9192,7 +8989,6 @@ body.genepool {
   box-shadow: 0 0.2rem #FFBA00 !important;
 }
 .genepool .has-warning .dna-message-provider {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 100% 0;
   width: 1.6rem;
@@ -9209,7 +9005,6 @@ body.genepool {
   box-shadow: 0 0.2rem #ea0000 !important;
 }
 .genepool .has-error .dna-message-provider {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 100% 21.05263157894737%;
   width: 1.6rem;
@@ -9240,7 +9035,6 @@ body.genepool {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url(../svgs/sli-pfeil-runter.svg);
   background-size: 1.4rem;
   background-position: calc(100% - .8rem) center;
   background-repeat: no-repeat;
@@ -9355,7 +9149,6 @@ body.genepool {
 }
 .genepool .checkbox input[type="checkbox"]:checked + label::before,
 .genepool .checkbox.checked input + label::before {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 100% 63.1578947368421%;
   width: 1.6rem;
@@ -9409,7 +9202,6 @@ body.genepool {
 }
 .genepool .radio input[type="radio"]:checked + label::before,
 .genepool .radio.checked input + label::before {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 35.55555555555556% 100%;
   width: 1.6rem;
@@ -9425,7 +9217,6 @@ body.genepool {
 .genepool .radio.readonly input[type="radio"]:checked + label::before,
 .genepool .radio.disabled.checked input + label::before,
 .genepool .radio.readonly.checked input + label::before {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 17.77777777777778% 100%;
   width: 1.6rem;
@@ -9459,7 +9250,6 @@ body.genepool {
 }
 .genepool .radio-group.disabled .checked input + label::before,
 .genepool .radio-group.disabled input:checked + label::before {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 17.77777777777778% 100%;
   width: 1.6rem;
@@ -9624,7 +9414,6 @@ body.genepool {
   content: ">";
   font-size: 0;
   display: inline-block;
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 81.63265306122449% 23.076923076923077%;
   width: 0.8rem;
@@ -9646,7 +9435,6 @@ body.genepool {
   content: ">";
   font-size: 0;
   display: inline-block;
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 81.63265306122449% 23.076923076923077%;
   width: 0.8rem;
@@ -9668,7 +9456,6 @@ body.genepool {
   content: ">";
   font-size: 0;
   display: inline-block;
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 81.63265306122449% 23.076923076923077%;
   width: 0.8rem;
@@ -9698,7 +9485,6 @@ body.genepool {
   content: ">";
   font-size: 0;
   display: inline-block;
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 81.63265306122449% 23.076923076923077%;
   width: 0.8rem;
@@ -9789,15 +9575,12 @@ body.genepool {
 .genepool .dna-loader-loop-lg .loader:before {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
-  background-image: url("../images/load-images/loader64_animationcake_2.png");
   background-size: 3.2rem 6.4rem;
 }
 .genepool .dna-loader-loop-lg .loader:after {
-  background-image: url("../images/load-images/loader64_animationcake_1.png");
   background-size: 3.2rem 6.4rem;
 }
 .genepool .dna-loader-loop-lg .loaderOverlay {
-  background-image: url("../images/load-images/loader64_overlay.png");
   background-size: 6.4rem 6.4rem;
 }
 .genepool .dna-loader-loop-lg .dna-loader-loop {
@@ -9821,15 +9604,12 @@ body.genepool {
 .genepool .dna-loader-loop-md .loader:before {
   -webkit-animation-delay: 0.25s;
   animation-delay: 0.25s;
-  background-image: url("../images/load-images/loader32_animationcake_2.png");
   background-size: 1.6rem 3.2rem;
 }
 .genepool .dna-loader-loop-md .loader:after {
-  background-image: url("../images/load-images/loader32_animationcake_1.png");
   background-size: 1.6rem 3.2rem;
 }
 .genepool .dna-loader-loop-md .loaderOverlay {
-  background-image: url("../images/load-images/loader32_overlay.png");
   background-size: 3.2rem 3.2rem;
 }
 .genepool .dna-loader-loop-md .dna-loader-loop {
@@ -9853,15 +9633,12 @@ body.genepool {
 .genepool .dna-loader-loop-sm .loader:before {
   -webkit-animation-delay: 0.35s;
   animation-delay: 0.35s;
-  background-image: url("../images/load-images/loader16_animationcake_2.png");
   background-size: 0.8rem 1.6rem;
 }
 .genepool .dna-loader-loop-sm .loader:after {
-  background-image: url("../images/load-images/loader16_animationcake_1.png");
   background-size: 0.8rem 1.6rem;
 }
 .genepool .dna-loader-loop-sm .loaderOverlay {
-  background-image: url("../images/load-images/loader16_overlay.png");
   background-size: 1.6rem 1.6rem;
 }
 .genepool .dna-loader-loop-sm .dna-loader-loop {
@@ -9957,7 +9734,6 @@ body.genepool {
 }
 .genepool .dna-close .icon,
 .genepool .dna-btn-close .icon {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 51.06382978723404% 40%;
   width: 1.2rem;
@@ -10039,28 +9815,24 @@ body.genepool {
   display: block;
 }
 .genepool .dna-alert-error .dna-alert-icon .icon {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 0 73.33333333333333%;
   width: 3.2rem;
   height: 3.2rem;
 }
 .genepool .dna-alert-warning .dna-alert-icon .icon {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 21.62162162162162% 0;
   width: 3.2rem;
   height: 3.2rem;
 }
 .genepool .dna-alert-information .dna-alert-icon .icon {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 64.86486486486487% 0;
   width: 3.2rem;
   height: 3.2rem;
 }
 .genepool .dna-alert-success .dna-alert-icon .icon {
-  background-image: url("../sprites/dna-theme-sprite.symbol-d9a1be31.svg");
   background-repeat: no-repeat;
   background-position: 60.46511627906977% 61.111111111111114%;
   width: 2rem;
@@ -10384,7 +10156,6 @@ body.genepool {
   display: block;
   position: absolute;
   height: 1rem;
-  background: url('../images/schattenkante.png') no-repeat;
   background-size: 100% 1rem;
   z-index: 9;
   top: 4.1rem;

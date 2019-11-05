@@ -11,6 +11,10 @@ export class ViewerItemComponent implements OnInit {
   @Input()
   document: Document;
 
+  isUploaded():boolean{
+    return this.document.uploadTime !== 'n.a.';
+  }
+
   constructor() { }
 
   ngOnInit() {

@@ -1,4 +1,20 @@
-<div class="row">
+<div *ngIf="!isUploaded()" class="row" style="color: lightgray;">
+    <div class="col-3">
+        <h5>{{ document.id }}</h5>
+    </div>
+    <div class="col-6">
+        <p>{{document.name}}</p>
+        <p>{{document.uploadTime}}</p>
+    </div>
+    <div class="col-3">
+
+        <div class="row spinner-grow" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="isUploaded()" class="row">
     <div class="col-3">
         <h5>{{ document.id }}</h5>
     </div>
