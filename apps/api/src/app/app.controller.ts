@@ -1,9 +1,9 @@
 import { DocumentsGateway } from './documents-gateway';
 import { Document } from '@nx-document/model';
-import { Controller, Get, Post, UseInterceptors, UploadedFile, Param } from '@nestjs/common';
+import { Controller, Get, Post, UseInterceptors, UploadedFile, Param, Delete } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { DocumentEntity } from './document-entity';
-import * as uuid from 'uuid';
+import * as uuidGenerator from 'uuid';
 
 import { InMemoryDBService } from '@nestjs-addons/in-memory-db';
 
@@ -21,10 +21,10 @@ export class AppController {
   }
 
   @Get('documents/:uuid')
-  getByUUID(@Param() params): Document {
+  getByUUID(@Param('uuid') uuid: string): Document {
     const document = this.documentService
       .getAll()
-      .find(elem => elem.uuid === params.uuid);
+      .find(elem => elem.uuid === uuid);
 
     if (document) {
       return { id: document.uuid, name: document.name, uploadTime: document.uploadTime }
@@ -35,7 +35,7 @@ export class AppController {
   @Post('documents')
   @UseInterceptors(FileInterceptor('file'))
   uploadFile(@UploadedFile() file) {
-    const id = uuid.v4();
+    const id = uuidGenerator.v4();
     this.documentService
       .createAsync({ uuid: id, name: file.originalname, size: file.size, uploadTime: new Date().toLocaleTimeString() })
       .subscribe(elem => {
@@ -46,4 +46,15 @@ export class AppController {
 
     return { id: id, accepted: true };
   }
+
+  @Delete('documents/:uuid')
+  remove(@Param('uuid') uuid: string) {
+    const document = this.documentService
+      .getAll()
+      .find(elem => elem.uuid === uuid);
+    this.documentService.delete(document.id);
+
+    return { id: uuid, deleted: true };
+  }
+
 }

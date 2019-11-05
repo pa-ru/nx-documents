@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './viewer.component.html',
   styleUrls: ['./viewer.component.css']
 })
-export class ViewerComponent implements OnInit {
+export class ViewerComponent {
 
   constructor(public documentStore: DocumentStoreService) { }
 
-  ngOnInit() {
-
+  onReset() {
+    this.documentStore.reset();
   }
 }
