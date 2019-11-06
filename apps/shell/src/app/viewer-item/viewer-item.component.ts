@@ -4,7 +4,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'nx-document-viewer-item',
   templateUrl: './viewer-item.component.html',
-  styleUrls: ['./viewer-item.component.css']
+  styleUrls: ['./viewer-item.component.scss']
 })
 export class ViewerItemComponent implements OnInit {
 

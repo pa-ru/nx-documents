@@ -5,7 +5,7 @@ import { DocumentStoreService } from '../document-store.service';
 @Component({
   selector: 'nx-document-upload',
   templateUrl: './upload.component.html',
-  styleUrls: ['./upload.component.css']
+  styleUrls: ['./upload.component.scss']
 })
 export class UploadComponent implements OnInit {
 
