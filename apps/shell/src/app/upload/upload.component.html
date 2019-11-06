@@ -1,13 +1,15 @@
 <div class="row">
-    <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
-        <div class="input-group">
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="inputGroupFile04" (change)="onFileSelect($event)">
-                <label class="custom-file-label" for="inputGroupFile04">{{chosenFile}}</label>
+    <div class="col">
+        <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+            <div class="input-group">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile04" (change)="onFileSelect($event)">
+                    <label class="custom-file-label" for="inputGroupFile04">{{chosenFile}}</label>
+                </div>
+                <div class="input-group-append">
+                    <button class="btn btn-primary btn-submit" type="button" type="submit">Upload</button>
+                </div>
             </div>
-            <div class="input-group-append">
-                <button class="btn btn-primary btn-submit" type="button" type="submit">Upload</button>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
