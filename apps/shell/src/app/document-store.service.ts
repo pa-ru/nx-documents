@@ -40,7 +40,7 @@ export class DocumentStoreService {
     const document = this.documents.find(elem => elem.id === prototype.id);
     if (document) {
       const index = this.documents.indexOf(document);
-      this.documents[index] = {...prototype};
+      this.documents[index] = { ...prototype };
       this.documents = [...this.documents];
     }
 
@@ -69,7 +69,7 @@ export class DocumentStoreService {
       .forEach(elem => this.http
         .delete(`/api/documents/${elem.id}`)
         .subscribe((res) => console.log(res)));
-        
+
     // the hard way: this.fetchData();
     this.documents = [];
   }

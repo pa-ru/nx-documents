@@ -16,3 +16,12 @@ Run `ng serve` **and** `ng serve api` to start front- and backend.
 Navigate to http://localhost:4200/ to view the frontend.
 
 When coding the apps will automatically reload if you change and save any of the source files.
+
+
+## Debuggin
+### frontend
+Use your favorite browsers developer tools or attach an IDE of your choice
+### backend
+#### VSCode
+* execute `ng serve api` to start the backend
+* go to debug section and hit the play button (label must be 'attach to api')
