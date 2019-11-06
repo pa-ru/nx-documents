@@ -21,6 +21,6 @@ export class DocumentsGateway implements OnGatewayConnection, OnGatewayDisconnec
     }
 
     public broadcast(document: Document) {
-        this.server.emit(DOCUMENT_WEBSOCKET.DOCUMENT_PROCESSED_EVENT_NAME, document.id)
+        this.server.emit(DOCUMENT_WEBSOCKET.DOCUMENT_PROCESSED_EVENT_NAME, document)
     }
 }  

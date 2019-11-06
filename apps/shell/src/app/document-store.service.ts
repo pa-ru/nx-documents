@@ -27,12 +27,8 @@ export class DocumentStoreService {
 
     this.socket
       .fromEvent(DOCUMENT_WEBSOCKET.DOCUMENT_PROCESSED_EVENT_NAME)
-      .subscribe((documentMessage: DocumentMessage) => {
-        this.http
-          .get<Document>(`/api/documents/${documentMessage}`)
-          .subscribe(result => {
-            this.updateDocument(result);
-          });
+      .subscribe((document: Document) => {
+        this.updateDocument(document);
       });
   }
 
@@ -55,7 +51,7 @@ export class DocumentStoreService {
     const fileName = (<File>formData.get('file')).name;
     this.http.post(this.SERVER_URL, formData).subscribe(
       (res) => {
-        const newItem = { id: (<any>res).id, name: fileName, uploadTime: 'n.a.' }
+        const newItem = { id: (<any>res).id, name: fileName, uploadTime: 'n.a.', size: 0 }
         this.documents = [...this.documents, newItem];
 
         console.log(JSON.stringify(res));

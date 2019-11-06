@@ -1,5 +1,7 @@
 export interface Document{
-    id: number;
+    id: number,
     name: string;
+    size: number;
     uploadTime: string;
+    thumbnail?: string;
 }

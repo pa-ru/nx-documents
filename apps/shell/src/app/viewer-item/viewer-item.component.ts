@@ -11,13 +11,29 @@ export class ViewerItemComponent implements OnInit {
   @Input()
   document: Document;
 
-  isUploaded():boolean{
+  image: string;
+
+  getImage() {
+    return;
+  }
+
+  isUploaded(): boolean {
+    this.processThumbnail();
     return this.document.uploadTime !== 'n.a.';
   }
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
+    this.processThumbnail();
+  }
+
+  processThumbnail() {
+    if (this.document && this.document.thumbnail) {
+      this.image = "data:image/png;base64," + this.document.thumbnail;
+    }
   }
 
 }

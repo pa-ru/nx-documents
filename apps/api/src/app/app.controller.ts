@@ -1,9 +1,10 @@
 import { DocumentsGateway } from './documents-gateway';
 import { Document } from '@nx-document/model';
-import { Controller, Get, Post, UseInterceptors, UploadedFile, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, UseInterceptors, UploadedFile, Param, Delete, ClassSerializerInterceptor } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { DocumentEntity } from './document-entity';
 import { InMemoryDBService } from '@nestjs-addons/in-memory-db';
+import * as sharpThumbnailer from 'sharp';
 
 @Controller()
 export class AppController {
@@ -13,32 +14,42 @@ export class AppController {
 
   @Get('documents')
   getAll(): Document[] {
-    return this.documentService.getAll().map(elem => {
-      return { id: elem.id, name: elem.name, uploadTime: elem.uploadTime };
-    });
+    return this.documentService.getAll();
   }
 
+  @UseInterceptors(ClassSerializerInterceptor)
   @Get('documents/:id')
   getById(@Param('id') id: number): Document {
-    const document = this.documentService.get(id);
-
-    if (document) {
-      return { id: document.id, name: document.name, uploadTime: document.uploadTime }
-    }
-    return null;
+    return this.documentService.get(id);
   }
 
   @Post('documents')
   @UseInterceptors(FileInterceptor('file'))
   uploadFile(@UploadedFile() file) {
     const nextId = this.nextId();
+    let document: DocumentEntity = { id: nextId, name: file.originalname, size: file.size, uploadTime: new Date().toLocaleTimeString() };
 
     this.documentService
-      .createAsync({ id: nextId, name: file.originalname, size: file.size, uploadTime: new Date().toLocaleTimeString() })
-      .subscribe(elem => {
+      .createAsync(document)
+      .subscribe(() => {
         setTimeout(() => {
-          this.documentsGateway.broadcast({ id: elem.id, name: elem.name, uploadTime: elem.uploadTime })
-        }, 3000)
+          sharpThumbnailer(file.buffer)
+            .resize(30)
+            .toBuffer()
+            .then((thumbnail) => {
+              document = {
+                ...document,
+                thumbnail: thumbnail.toString('base64')
+              };
+              this.documentService.update(document);
+              this.documentsGateway.broadcast(document);
+            })
+            .catch((err) => {
+              // also notifiy the client, a thumbnail is optional...
+              this.documentsGateway.broadcast(document);
+              console.error(err);
+            });
+        }, 2000)
       });
 
     return { id: nextId, accepted: true };
