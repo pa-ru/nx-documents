@@ -12,7 +12,7 @@ The synchronous communication is based on RESTfull http (FileUpload, Resource-ha
 
 ## Running and coding 
 
-First you need to run `ng serve` **and** `ng serve api` to start front- and backend.
-Afterwards navigate to http://localhost:4200/ and take a look at the current version of the app.
+Run `ng serve` **and** `ng serve api` to start front- and backend.
+Navigate to http://localhost:4200/ to view the frontend.
 
 When coding the apps will automatically reload if you change and save any of the source files.
